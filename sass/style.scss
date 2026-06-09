@@ -94,9 +94,6 @@ body {
   font-family: var(--font-base);
   font-size: var(--text-base);
   line-height: 1.55;
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease;
 }
 
 img,
@@ -818,9 +815,12 @@ button {
   font-size: var(--text-nav);
 }
 
-.search-button:hover,
-.search-button:focus-visible {
+.search-button:hover {
   color: var(--color-text);
+}
+
+.search-button:focus-visible {
+  outline: none;
 }
 
 .search-modal[hidden] {
@@ -865,8 +865,7 @@ button {
 }
 
 #search-input:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: -3px;
+  outline: none;
 }
 
 .search-close {

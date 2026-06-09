@@ -1,7 +1,7 @@
 +++
 title = "mauro.ar"
 slug = "mauroar"
-date = 2024-06-05T03:51:00+00:00
+date = 2022-06-05T03:51:00+00:00
 draft = false
 lang = "es-AR"
 
