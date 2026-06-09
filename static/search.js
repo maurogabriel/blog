@@ -41,12 +41,39 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const documents = getDocuments();
+  let activeIndex = -1;
+
+  function getResultItems() {
+    return Array.from(searchResults.querySelectorAll(".search-result"));
+  }
+
+  function clearActiveResult() {
+    getResultItems().forEach((item) => item.classList.remove("active"));
+    activeIndex = -1;
+  }
+
+  function setActiveResult(index) {
+    const items = getResultItems();
+    if (!items.length) {
+      activeIndex = -1;
+      return;
+    }
+
+    if (index < 0) index = items.length - 1;
+    if (index >= items.length) index = 0;
+
+    items.forEach((item) => item.classList.remove("active"));
+    items[index].classList.add("active");
+    activeIndex = index;
+    items[index].scrollIntoView({ block: "nearest" });
+  }
 
   function openSearch() {
     searchModal.removeAttribute("hidden");
     searchOpen?.setAttribute("aria-expanded", "true");
     searchInput.value = "";
     searchResults.innerHTML = "";
+    clearActiveResult();
     setTimeout(() => searchInput.focus(), 50);
   }
 
@@ -61,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!term) {
       searchResults.innerHTML = "";
+      clearActiveResult();
       return;
     }
 
@@ -75,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!results.length) {
       searchResults.innerHTML = `<p class="search-empty">Sin resultados.</p>`;
+      clearActiveResult();
       return;
     }
 
@@ -95,10 +124,32 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       })
       .join("");
+
+    setActiveResult(0);
   }
 
   searchOpen?.addEventListener("click", openSearch);
   searchClose?.addEventListener("click", closeSearch);
+
+  searchInput?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      setActiveResult(activeIndex + 1);
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setActiveResult(activeIndex - 1);
+    }
+
+    if (event.key === "Enter") {
+      const items = getResultItems();
+      if (activeIndex >= 0 && items[activeIndex]) {
+        event.preventDefault();
+        window.location.href = items[activeIndex].href;
+      }
+    }
+  });
 
   searchInput?.addEventListener("input", () => {
     renderResults(searchInput.value);
