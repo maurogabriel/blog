@@ -630,27 +630,34 @@ button {
 }
 
 .tag-list a {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   width: 100%;
-  padding: 16px 18px;
+  padding-block: 10px;
   color: var(--color-link);
   font-size: var(--text-list);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .tag-list a:hover,
 .tag-list a:focus-visible {
-  background: var(--color-code-bg);
   color: var(--color-link-hover);
   text-decoration: none;
+}
+
+.tag-list .tag-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .tag-count {
   color: var(--color-muted);
   font-size: var(--text-list);
   white-space: nowrap;
+  min-width: max-content;
+  text-align: right;
 }
 
 /* ==================================================
