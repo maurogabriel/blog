@@ -70,53 +70,56 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
   <div class="site">
 
     <header class="site-header">
       <a class="site-logo" href="{{ get_url(path='/') | safe }}" aria-label="Inicio">
-        <img src="{{ get_url(path='icons/home.svg') | safe }}" alt="">
+        <img src="{{ get_url(path='icons/home.svg') | safe }}" alt="" aria-hidden="true">
       </a>
 
-      <nav class="site-nav" aria-label="Navegación principal">
-        <a href="{{ get_url(path='/') | safe }}">Inicio</a>
-        <a href="{{ get_url(path='posts') | safe }}">Artículos</a>
-        <a href="{{ get_url(path='tags') | safe }}">Etiquetas</a>
+      <nav aria-label="Navegación principal">
+        <ul class="site-nav">
+          <li><a href="{{ get_url(path='/') | safe }}">Inicio</a></li>
+          <li><a href="{{ get_url(path='posts') | safe }}">Artículos</a></li>
+          <li><a href="{{ get_url(path='tags') | safe }}">Etiquetas</a></li>
+          <li class="site-nav-actions">
+            <button
+              id="search-open"
+              class="search-button"
+              type="button"
+              aria-label="Buscar"
+              aria-controls="search-modal"
+              aria-expanded="false"
+            >
+              <img src="{{ get_url(path='icons/search.svg') | safe }}" alt="" aria-hidden="true">
+            </button>
 
-        <button
-          id="search-open"
-          class="search-button"
-          type="button"
-          aria-label="Buscar"
-          aria-controls="search-modal"
-          aria-expanded="false"
-        >
-          Buscar
-        </button>
+            <span class="nav-separator" aria-hidden="true">|</span>
 
-        <span class="nav-separator" aria-hidden="true">|</span>
-
-        <button
-          id="theme-toggle"
-          class="theme-button"
-          type="button"
-          aria-label="Cambiar tema"
-        >
-          <img
-            id="theme-icon-light"
-            src="{{ get_url(path='icons/moon.svg') | safe }}"
-            alt=""
-          >
-          <img
-            id="theme-icon-dark"
-            src="{{ get_url(path='icons/sun.svg') | safe }}"
-            alt=""
-          >
-        </button>
-
+            <button
+              id="theme-toggle"
+              class="theme-button"
+              type="button"
+              aria-label="Cambiar tema"
+            >
+              <img
+                id="theme-icon-light"
+                src="{{ get_url(path='icons/moon.svg') | safe }}"
+                alt=""
+              >
+              <img
+                id="theme-icon-dark"
+                src="{{ get_url(path='icons/sun.svg') | safe }}"
+                alt=""
+              >
+            </button>
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main class="site-main">
+    <main id="main-content" class="site-main">
       {% block content %}{% endblock content %}
     </main>
 
@@ -152,7 +155,7 @@
 
   </div>
 
-  <div id="search-modal" class="search-modal" hidden>
+  <div id="search-modal" class="search-modal" hidden aria-hidden="true">
     <div
       class="search-panel"
       role="dialog"
@@ -178,7 +181,7 @@
         </button>
       </div>
 
-      <div id="search-results" class="search-results"></div>
+      <div id="search-results" class="search-results" aria-live="polite" aria-label="Resultados de búsqueda"></div>
     </div>
   </div>
 

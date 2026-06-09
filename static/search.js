@@ -4,6 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchModal = document.getElementById("search-modal");
   const searchInput = document.getElementById("search-input");
   const searchResults = document.getElementById("search-results");
+  const siteMain = document.getElementById("main-content");
+  const focusableSelectors = [
+    "button:not([disabled])",
+    "a[href]",
+    "input:not([disabled])",
+    "textarea:not([disabled])",
+    "select:not([disabled])",
+    "[tabindex]:not([tabindex='-1'])",
+  ].join(",");
 
   function getDocuments() {
     if (typeof searchIndex === "undefined") return [];
@@ -48,7 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function clearActiveResult() {
-    getResultItems().forEach((item) => item.classList.remove("active"));
+    getResultItems().forEach((item) => {
+      item.classList.remove("active");
+      item.removeAttribute("aria-selected");
+    });
     activeIndex = -1;
   }
 
@@ -62,14 +74,50 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index < 0) index = items.length - 1;
     if (index >= items.length) index = 0;
 
-    items.forEach((item) => item.classList.remove("active"));
+    items.forEach((item) => {
+      item.classList.remove("active");
+      item.removeAttribute("aria-selected");
+    });
     items[index].classList.add("active");
+    items[index].setAttribute("aria-selected", "true");
     activeIndex = index;
     items[index].scrollIntoView({ block: "nearest" });
   }
 
+  function getFocusableModalElements() {
+    if (!searchModal) return [];
+    return Array.from(searchModal.querySelectorAll(focusableSelectors)).filter(
+      (element) => element.offsetParent !== null
+    );
+  }
+
+  function trapTabKey(event) {
+    if (!searchModal || searchModal.hidden) {
+      return;
+    }
+
+    const focusable = getFocusableModalElements();
+    if (!focusable.length) {
+      return;
+    }
+
+    const firstElement = focusable[0];
+    const lastElement = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus();
+    } else if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault();
+      firstElement.focus();
+    }
+  }
+
   function openSearch() {
     searchModal.removeAttribute("hidden");
+    searchModal.setAttribute("aria-hidden", "false");
+    siteMain?.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "hidden";
     searchOpen?.setAttribute("aria-expanded", "true");
     searchInput.value = "";
     searchResults.innerHTML = "";
@@ -79,6 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function closeSearch() {
     searchModal.setAttribute("hidden", "");
+    searchModal.setAttribute("aria-hidden", "true");
+    siteMain?.removeAttribute("aria-hidden");
+    document.body.style.overflow = "";
     searchOpen?.setAttribute("aria-expanded", "false");
     searchOpen?.focus();
   }
@@ -157,6 +208,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchModal?.addEventListener("click", (event) => {
     if (event.target === searchModal) closeSearch();
+  });
+
+  searchModal?.addEventListener("keydown", (event) => {
+    if (event.key === "Tab") {
+      trapTabKey(event);
+    }
   });
 
   document.addEventListener("keydown", (event) => {
