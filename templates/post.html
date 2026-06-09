@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
+
+{% block content %}
+
+<article class="post">
+  <header class="post-header">
+
+    {% if page.extra.featured is defined and page.extra.featured == true %}
+      <div class="post-featured-label">★ Destacado</div>
+    {% endif %}
+
+    <h1>{{ page.title }}</h1>
+
+    {% if page.date %}
+      <time datetime="{{ page.date }}">
+        {{ page.date | date(format="%d %b %Y") }}
+      </time>
+    {% endif %}
+
+    {% if page.taxonomies.tags %}
+      <div class="post-tags">
+        {% for tag in page.taxonomies.tags %}
+          {% set tag_slug = tag | slugify %}
+          <a href="{{ get_url(path='tags/' ~ tag_slug ~ '/') | safe }}" class="tag-link">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ page.content | safe }}
+  </div>
+</article>
+
+{% endblock content %}

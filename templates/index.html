@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="home-hero">
+  <img
+    class="home-avatar"
+    src="{{ get_url(path=config.extra.avatar) }}"
+    alt="{{ config.extra.author }}"
+  >
+
+  <h1 class="home-title">{{ config.title }}</h1>
+
+  <p class="home-subtitle">
+    {{ config.extra.subtitle }}
+  </p>
+</section>
+
+<section class="home-intro">
+  <h2>Sobre este blog</h2>
+
+  <p>
+    Bienvenido a mi espacio digital. Aquí comparto artículos sobre
+    tecnología, productividad, automatización, desarrollo web,
+    aplicaciones para Mac e iPhone, organización personal y
+    experiencias reales utilizando herramientas digitales para
+    trabajar de forma más eficiente. Vamos al 2026
+  </p>
+
+  <p>
+    El objetivo de este sitio es documentar conocimientos,
+    descubrimientos, proyectos y soluciones prácticas que puedan
+    resultar útiles para otras personas.
+  </p>
+</section>
+
+{% set posts = get_section(path="posts/_index.md") %}
+
+{% set_global featured_count = 0 %}
+
+{% for post in posts.pages | sort(attribute="date") | reverse %}
+  {% if featured_count == 0 and post.extra.featured is defined and post.extra.featured == true %}
+
+    {% set_global featured_count = 1 %}
+
+    <section class="featured-post">
+      <h2>Artículo destacado</h2>
+
+<article class="featured-card">
+
+  <div class="featured-badge">
+    ★ Destacado
+  </div>
+
+  <h3>
+    <a href="{{ post.permalink }}">
+      {{ post.title }}
+    </a>
+  </h3>
+
+  {% if post.summary %}
+    <div class="featured-description">
+      {{ post.summary | safe }}
+    </div>
+  {% endif %}
+
+  <a class="featured-read-more" href="{{ post.permalink }}">Leer más →</a>
+
+</article>
+    </section>
+
+  {% endif %}
+{% endfor %}
+
+<section class="home-posts">
+  <h2>Últimos artículos</h2>
+
+  <div class="home-post-list">
+    {% for post in posts.pages | sort(attribute="date") | reverse | slice(end=3) %}
+      <article class="post-list-item">
+        <a class="post-title" href="{{ post.permalink }}">
+          {{ post.title }}
+        </a>
+
+        <div class="post-meta">
+          {% if post.extra.featured is defined and post.extra.featured == true %}
+            <span
+              class="post-favorite"
+              title="Artículo destacado"
+              aria-label="Artículo destacado"
+            >
+              ★
+            </span>
+          {% endif %}
+
+          <time class="post-date" datetime="{{ post.date }}">
+            {{ post.date | date(format="%d %b %Y") }}
+          </time>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <a class="see-all-posts" href="{{ get_url(path='posts') }}">
+    Ver todos los artículos
+  </a>
+</section>
+
+{% endblock content %}

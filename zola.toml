@@ -1,0 +1,20 @@
+base_url = "https://mauro.ar"
+title = "mauro.ar*"
+description = "Blog personal sobre tecnología, productividad y diseño."
+
+compile_sass = true
+build_search_index = true
+generate_feeds = true
+
+taxonomies = [
+  { name = "tags", feed = true }
+]
+
+[markdown]
+[markdown.highlighting]
+theme = "ayu-dark"
+
+[extra]
+author = "Mauro Gabriel"
+subtitle = "Blog personal 🧑‍💻 donde escribo sobre: música 🎧 / tecnología 🖥️ / productividad 🚀 y otras cosas."
+avatar = "avatar.jpg"

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#2C3B4D" media="(prefers-color-scheme: dark)">
+
+  <title>
+    {% if page.title %}
+      {{ page.title }} | {{ config.title }}
+    {% elif section.title %}
+      {{ section.title }} | {{ config.title }}
+    {% else %}
+      {{ config.title }}
+    {% endif %}
+  </title>
+
+  <link rel="canonical" href="{{ current_url | default(value=get_url(path='/')) | safe }}">
+  <link rel="icon" href="{{ get_url(path='icons/home.svg') | safe }}" type="image/svg+xml">
+
+  <meta property="og:site_name" content="{{ config.title }}">
+  <meta
+    property="og:title"
+    content="{% if page.title %}{{ page.title }} | {{ config.title }}{% elif section.title %}{{ section.title }} | {{ config.title }}{% else %}{{ config.title }}{% endif %}"
+  >
+  <meta
+    property="og:description"
+    content="{% if page.description %}{{ page.description }}{% elif section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}"
+  >
+  <meta property="og:url" content="{{ current_url | default(value=get_url(path='/')) | safe }}">
+  <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+  <meta property="og:image" content="{{ get_url(path=config.extra.avatar) | safe }}">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="{{ get_url(path='style.css') | safe }}">
+
+  <script src="{{ get_url(path='theme.js') | safe }}" defer></script>
+</head>
+
+<body>
+  <div class="site">
+
+    <header class="site-header">
+      <a class="site-logo" href="{{ get_url(path='/') | safe }}" aria-label="Inicio">
+        <img src="{{ get_url(path='icons/home.svg') | safe }}" alt="">
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="{{ get_url(path='/') | safe }}">Home</a>
+        <a href="{{ get_url(path='posts') | safe }}">Posts</a>
+        <a href="{{ get_url(path='tags') | safe }}">Tags</a>
+
+        <button
+          id="search-open"
+          class="search-button"
+          type="button"
+          aria-label="Buscar"
+          aria-controls="search-modal"
+          aria-expanded="false"
+        >
+          Buscar
+        </button>
+
+        <span class="nav-separator" aria-hidden="true">|</span>
+
+        <button
+          id="theme-toggle"
+          class="theme-button"
+          type="button"
+          aria-label="Cambiar tema"
+        >
+          <img
+            id="theme-icon-light"
+            src="{{ get_url(path='icons/moon.svg') | safe }}"
+            alt=""
+          >
+          <img
+            id="theme-icon-dark"
+            src="{{ get_url(path='icons/sun.svg') | safe }}"
+            alt=""
+          >
+        </button>
+
+      </nav>
+    </header>
+
+    <main class="site-main">
+      {% block content %}{% endblock content %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-social">
+        <a
+          href="https://github.com/maurogabriel"
+          aria-label="GitHub"
+          rel="me noopener noreferrer"
+        >
+          <img src="{{ get_url(path='icons/github.svg') | safe }}" alt="">
+        </a>
+
+        <a
+          href="https://x.com/maurogabriel"
+          aria-label="X"
+          rel="me noopener noreferrer"
+        >
+          <img src="{{ get_url(path='icons/x.svg') | safe }}" alt="">
+        </a>
+
+        <a href="{{ get_url(path='atom.xml') | safe }}" aria-label="RSS">
+          <img src="{{ get_url(path='icons/rss.svg') | safe }}" alt="">
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        © {{ now() | date(format="%Y") }}
+        Mauro Gabriel.
+        Powered by Zola.
+      </div>
+    </footer>
+
+  </div>
+
+  <div id="search-modal" class="search-modal" hidden>
+    <div
+      class="search-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Buscar artículos"
+    >
+      <div class="search-header">
+        <input
+          id="search-input"
+          type="search"
+          aria-label="Buscar artículos"
+          placeholder="Buscar artículos..."
+          autocomplete="off"
+        >
+
+        <button
+          id="search-close"
+          class="search-close"
+          type="button"
+          aria-label="Cerrar búsqueda"
+        >
+          ×
+        </button>
+      </div>
+
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+
+<script src="{{ get_url(path='search_index.en.js') | safe }}"></script>
+<script src="{{ get_url(path='search.js') | safe }}"></script>
+
+</body>
+</html>
