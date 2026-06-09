@@ -64,7 +64,7 @@
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="{{ get_url(path='style.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='style.css') | safe }}?v={{ now() | date(format="%Y%m%d%H%M%S") }}">
 
   <script src="{{ get_url(path='theme.js') | safe }}" defer></script>
 </head>
