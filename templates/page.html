@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
+{% block description %}{{ page.description | default(value=page.summary | default(value="") | striptags) | default(value=config.description) }}{% endblock description %}
 
 {% block content %}
 
