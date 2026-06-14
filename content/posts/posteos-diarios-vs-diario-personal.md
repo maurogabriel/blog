@@ -17,7 +17,7 @@ meta_image = "https://gcdnb.pbrd.co/images/QXruI6RZKCZH.jpg"
 
 ![Write](https://gcdnb.pbrd.co/images/QXruI6RZKCZH.jpg)
 
-Desde hace varios años vengo tratando de mantener el buen hábito de escribir un diario personal. En él he plasmado tofdas las vivencias de cada día, pensamientos, preguntas, objetivos, promesas, etc.
+Desde hace varios años vengo tratando de mantener el buen hábito de escribir un diario personal. En él he plasmado todas las vivencias de cada día, pensamientos, preguntas, objetivos, promesas, etc.
 
 Pero siempre me ha costado mantener el ritmo diario de escritura en este diario, a veces en un mes tenía 30 registros, y otros meses solo 2 o 3.
 
@@ -27,8 +27,8 @@ Pero sé muy bien cuál es el motivo, pues estos últimos días estuve activamen
 
 Pero he aquí la cuestión: me siento más motivado a escribir para este blog que escribir las entradas en mi diario personal.
 
-En parte sé que es porque en este espacio puedo abarcar diferentes temas, con más o poca profundidad y/o explicaciones, enlaces, fotos, imágenes, etc, 
+En parte sé que es porque en este espacio puedo abarcar diferentes temas, con más o poca profundidad y/o explicaciones, enlaces, fotos, imágenes, etc,
 
-En cambio, siento que para escribir en mi diario necesito centrarme en aspectos más personales y que a veces me cuestan plasmar en una hoja. Por ello he estado pensando en la posibilidad de escribir solo los días en que tenga momentos muy significativos, aquellos que me marquen en algún aspecto, que sean especiales para mi y mi entorno personal. 
+En cambio, siento que para escribir en mi diario necesito centrarme en aspectos más personales y que a veces me cuestan plasmar en una hoja. Por ello he estado pensando en la posibilidad de escribir solo los días en que tenga momentos muy significativos, aquellos que me marquen en algún aspecto, que sean especiales para mi y mi entorno personal.
 
 Bueno será motivo de ver estos días, ver como logro equilibrar esto o bien implementar lo que estaba pensando.
