@@ -1,7 +1,8 @@
 +++
-title = "Frase del día"
+title = "Frase del día: Voltaire"
 slug = "frase-del-dia-2024-06-18"
 date = 2024-06-18T09:00:00+00:00
+description = "Una frase de Voltaire sobre reconocer nuestras debilidades, perdonar los errores ajenos y convivir con mayor comprensión."
 draft = false
 lang = "es-AR"
 

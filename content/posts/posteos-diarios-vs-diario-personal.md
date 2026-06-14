@@ -2,6 +2,7 @@
 title = "Posteos diarios vs diario personal"
 slug = "posteos-diarios-vs-diario-personal"
 date = 2024-06-12T19:15:00+00:00
+description = "Diferencias entre escribir publicaciones para un blog y mantener un diario personal, con ideas para equilibrar ambos hábitos."
 draft = false
 lang = "es-AR"
 

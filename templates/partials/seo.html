@@ -1,0 +1,125 @@
+{% set seo_path = current_path | default(value="/404.html") %}
+{% set canonical_url = current_url | default(value=get_url(path='404.html', trailing_slash=false)) %}
+{% if page is defined %}
+  {% set canonical_url = page.permalink %}
+{% elif section is defined %}
+  {% set canonical_url = section.permalink %}
+{% endif %}
+
+{% set seo_title = config.title %}
+{% if seo_path == "/" %}
+  {% set seo_title = "Mauro.ar | Blog personal de tecnología y productividad" %}
+{% elif seo_path == "/404.html" %}
+  {% set seo_title = "Página no encontrada | Mauro.ar" %}
+{% elif page is defined %}
+  {% set seo_title = page.title ~ " | " ~ config.title %}
+{% elif section is defined %}
+  {% set seo_title = section.title ~ " | " ~ config.title %}
+{% elif term is defined %}
+  {% set seo_title = "Tag: " ~ term.name ~ " | " ~ config.title %}
+{% elif seo_path == "/tags/" %}
+  {% set seo_title = "Etiquetas | " ~ config.title %}
+{% endif %}
+
+{% set seo_description = config.description %}
+{% if page is defined and page.description %}
+  {% set seo_description = page.description %}
+{% elif section is defined and section.description %}
+  {% set seo_description = section.description %}
+{% elif term is defined %}
+  {% set seo_description = "Artículos de Mauro.ar etiquetados con " ~ term.name ~ "." %}
+{% elif seo_path == "/tags/" %}
+  {% set seo_description = "Explora las etiquetas y temas de los artículos publicados en Mauro.ar." %}
+{% elif seo_path == "/404.html" %}
+  {% set seo_description = "La página solicitada no existe o fue movida." %}
+{% endif %}
+
+{% set social_image_url = get_url(path=config.extra.social_image) %}
+
+<title>{{ seo_title }}</title>
+<meta name="description" content="{{ seo_description }}">
+<meta name="robots" content="{% if seo_path == "/404.html" %}noindex, follow{% else %}index, follow{% endif %}">
+<meta name="author" content="{{ config.extra.author }}">
+<meta name="keywords" content="{{ config.extra.keywords }}">
+{% if config.extra.google_site_verification %}
+  <meta name="google-site-verification" content="{{ config.extra.google_site_verification }}">
+{% endif %}
+
+<link rel="canonical" href="{{ canonical_url | safe }}">
+<link rel="alternate" hreflang="es" href="{{ canonical_url | safe }}">
+<link rel="alternate" hreflang="x-default" href="{{ canonical_url | safe }}">
+<link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') | safe }}">
+
+<meta property="og:title" content="{{ seo_title }}">
+<meta property="og:description" content="{{ seo_description }}">
+<meta property="og:type" content="{% if page is defined and page.date %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ canonical_url | safe }}">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta property="og:locale" content="es_AR">
+<meta property="og:image" content="{{ social_image_url | safe }}">
+<meta property="og:image:alt" content="Mauro Gabriel">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ seo_title }}">
+<meta name="twitter:description" content="{{ seo_description }}">
+<meta name="twitter:image" content="{{ social_image_url | safe }}">
+<meta name="twitter:site" content="@maurogabriel">
+<meta name="twitter:creator" content="@maurogabriel">
+
+{% if page is defined and page.date %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | json_encode | safe }},
+  "description": {{ seo_description | json_encode | safe }},
+  "datePublished": {{ page.date | json_encode | safe }},
+  "dateModified": {{ page.updated | default(value=page.date) | json_encode | safe }},
+  "author": {
+    "@type": "Person",
+    "name": "Mauro Gabriel",
+    "url": "https://mauro.ar/"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Mauro Gabriel",
+    "url": "https://mauro.ar/"
+  },
+  "mainEntityOfPage": {{ canonical_url | json_encode | safe }},
+  "url": {{ canonical_url | json_encode | safe }}
+}
+</script>
+{% elif seo_path == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://mauro.ar/#website",
+      "url": "https://mauro.ar/",
+      "name": "Mauro.ar",
+      "description": {{ seo_description | json_encode | safe }},
+      "inLanguage": "es"
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://mauro.ar/#blog",
+      "url": "https://mauro.ar/",
+      "name": "Mauro.ar",
+      "description": {{ seo_description | json_encode | safe }},
+      "publisher": {
+        "@id": "https://mauro.ar/#mauro-gabriel"
+      },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://mauro.ar/#mauro-gabriel",
+      "name": "Mauro Gabriel",
+      "url": "https://mauro.ar/"
+    }
+  ]
+}
+</script>
+{% endif %}

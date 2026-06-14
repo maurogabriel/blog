@@ -2,6 +2,7 @@
 title = "mauro.ar"
 slug = "mauroar"
 date = 2022-06-05T03:51:00+00:00
+description = "El comienzo de Mauro.ar: registro del dominio, elección del hosting y primeros pasos para construir y publicar el blog personal."
 draft = false
 lang = "es-AR"
 

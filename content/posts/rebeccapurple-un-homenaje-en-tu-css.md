@@ -2,6 +2,7 @@
 title = "Rebeccapurple, un homenaje en tu CSS"
 slug = "rebeccapurple-un-homenaje-en-tu-css"
 date = 2024-07-25T22:05:27+00:00
+description = "La historia de rebeccapurple, el color CSS creado como homenaje a Rebecca Meyer, y el significado humano detrás de su incorporación."
 draft = false
 lang = "es-AR"
 

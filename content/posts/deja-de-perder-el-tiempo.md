@@ -2,6 +2,7 @@
 title = "Deja de perder el tiempo"
 slug = "deja-de-perder-el-tiempo"
 date = 2024-06-20T01:44:00+00:00
+description = "Por qué dejar de perder el tiempo es un consejo simplista y qué estrategias flexibles ayudan a gestionar mejor la atención y las prioridades."
 draft = false
 lang = "es-AR"
 

@@ -2,6 +2,7 @@
 title = "Mi playlist para el trabajo 💪"
 slug = "mi-playlist-para-el-trabajo"
 date = 2024-06-13T01:55:00+00:00
+description = "Una selección musical para acompañar la jornada laboral, recuperar energía y mantener el enfoque mientras se completan tareas."
 draft = false
 lang = "es-AR"
 

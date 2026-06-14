@@ -1,7 +1,8 @@
 +++
-title = "Frase del día"
+title = "Frase del día: Jacques Cousteau"
 slug = "frase-del-dia-2024-06-24"
 date = 2024-06-24T03:00:00+00:00
+description = "Una frase de Jacques Cousteau sobre la relación entre humanidad y naturaleza, y la necesidad de protegerla para sobrevivir."
 draft = false
 lang = "es-AR"
 

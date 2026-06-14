@@ -2,6 +2,7 @@
 title = "Incrustando videos en Bear"
 slug = "incrustando-videos-en-bear"
 date = 2024-06-14T09:15:00+00:00
+description = "Cómo hacer que los videos incrustados en Bear Blog se adapten al ancho de la pantalla con CSS responsive y una relación de aspecto estable."
 draft = false
 lang = "es-AR"
 

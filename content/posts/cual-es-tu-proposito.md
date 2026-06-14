@@ -2,6 +2,7 @@
 title = "Cuál es tu propósito?"
 slug = "cual-es-tu-proposito"
 date = 2024-06-19T09:21:00+00:00
+description = "Una reflexión personal sobre el propósito, la identidad, el uso del tiempo y las formas de compartir conocimiento para ayudar a otras personas."
 draft = false
 lang = "es-AR"
 

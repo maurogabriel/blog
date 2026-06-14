@@ -2,6 +2,7 @@
 title = "Frase de esta semana"
 slug = "frase-de-esta-semana"
 date = 2024-06-14T22:13:00+00:00
+description = "La frase semanal de Tito Livio sobre las decisiones firmes frente a situaciones adversas y momentos con poca esperanza."
 draft = false
 lang = "es-AR"
 

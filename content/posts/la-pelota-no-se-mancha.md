@@ -2,6 +2,7 @@
 title = "La pelota no se mancha"
 slug = "la-pelota-no-se-mancha"
 date = 2024-07-28T02:44:49+00:00
+description = "Una reflexión sobre fútbol, identidad, polémicas y responsabilidad a partir de los festejos de Argentina tras la Copa América 2024."
 draft = false
 lang = "es-AR"
 

@@ -2,6 +2,7 @@
 title = "No Time For Dreaming by Charles Bradley"
 slug = "no-time-for-dreaming-by-charles-bradley"
 date = 2024-06-13T13:10:00+00:00
+description = "Una recomendación musical para escuchar No Time For Dreaming de Charles Bradley junto a Menahan Street Band."
 draft = false
 lang = "es-AR"
 

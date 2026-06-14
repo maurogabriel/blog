@@ -2,6 +2,7 @@
 title = "Canción de la semana"
 slug = "cancion-de-la-semana"
 date = 2024-06-06T21:14:00+00:00
+description = "La canción elegida de la semana: una interpretación de Shine On You Crazy Diamond por David Gilmour para escuchar y disfrutar."
 draft = false
 lang = "es-AR"
 

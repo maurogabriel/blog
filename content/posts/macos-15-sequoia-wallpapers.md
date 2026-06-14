@@ -2,6 +2,7 @@
 title = "MacOS 15 Sequoia wallpapers"
 slug = "macos-15-sequoia-wallpapers"
 date = 2024-06-11T15:00:00+00:00
+description = "Novedades iniciales de macOS 15 Sequoia y enlaces para descargar los wallpapers oficiales presentados durante la WWDC24."
 draft = false
 lang = "es-AR"
 

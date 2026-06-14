@@ -2,6 +2,7 @@
 title = "Salto de linea en Markdown"
 slug = "salto-de-linea-en-markdown"
 date = 2024-07-27T17:07:48+00:00
+description = "Cómo insertar saltos de línea en Markdown correctamente, con ejemplos prácticos para párrafos, listas simples y texto renderizado."
 draft = false
 lang = "es-AR"
 

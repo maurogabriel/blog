@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 
-{% block description %}{{ page.description | default(value=page.summary | default(value="") | striptags) | default(value=config.description) }}{% endblock description %}
-
 {% block content %}
 
 <article class="post">
@@ -23,7 +21,7 @@
       <div class="post-tags">
         {% for tag in page.taxonomies.tags %}
           {% set tag_slug = tag | slugify %}
-          <a href="{{ get_url(path='tags/' ~ tag_slug ~ '/') | safe }}" class="tag-link">{{ tag }}</a>
+          <a href="{{ get_url(path='tags/' ~ tag_slug, trailing_slash=true) | safe }}" class="tag-link">{{ tag }}</a>
         {% endfor %}
       </div>
     {% endif %}

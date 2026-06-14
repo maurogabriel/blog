@@ -2,6 +2,7 @@
 title = "Feriados interminables... que no se acaben"
 slug = "feriados-interminables-que-no-se-acaben"
 date = 2024-07-10T02:25:41+00:00
+description = "Cómo aprovechar un día feriado para descansar, ordenar pendientes, compartir en familia y avanzar en actividades personales."
 draft = false
 lang = "es-AR"
 

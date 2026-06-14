@@ -2,6 +2,7 @@
 title = "Weeklog 001"
 slug = "weeklog-001"
 date = 2024-06-09T16:57:02+00:00
+description = "Primera selección semanal de artículos, videos y herramientas sobre blogs, productividad, escritura, CSS y aplicaciones digitales."
 draft = false
 lang = "es-AR"
 

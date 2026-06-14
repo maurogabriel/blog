@@ -2,6 +2,7 @@
 title = "De donde surge mi motivación?"
 slug = "de-donde-surge-mi-motivacion"
 date = 2024-06-13T23:31:00+00:00
+description = "Una reflexión sobre cómo preparar la mente la noche anterior puede aportar motivación, energía y enfoque para cumplir las tareas del día."
 draft = false
 lang = "es-AR"
 

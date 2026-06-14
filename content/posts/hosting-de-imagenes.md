@@ -2,6 +2,7 @@
 title = "Hosting de imágenes"
 slug = "hosting-de-imagenes"
 date = 2024-06-09T02:43:00+00:00
+description = "Experiencia buscando un servicio sencillo para alojar imágenes de un blog y motivos para elegir Pasteboard frente a otras alternativas."
 draft = false
 lang = "es-AR"
 

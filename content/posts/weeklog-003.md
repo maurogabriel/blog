@@ -2,6 +2,7 @@
 title = "Weeklog 003"
 slug = "weeklog-003"
 date = 2024-06-23T17:05:00+00:00
+description = "Tercera selección semanal de recursos sobre diseño web, CSS, páginas personales, complementos para blogs y aprendizaje."
 draft = false
 lang = "es-AR"
 

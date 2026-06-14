@@ -2,6 +2,7 @@
 title = "Tareas atrasadas"
 slug = "tareas-atrasadas"
 date = 2023-06-05T01:35:00+00:00
+description = "Una reflexión breve sobre tareas pendientes, prioridades, dependencia de terceros y la necesidad de delegar para evitar la sobrecarga."
 draft = false
 lang = "es-AR"
 

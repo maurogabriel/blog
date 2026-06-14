@@ -2,6 +2,7 @@
 title = "El modelo de cajas CSS estándar"
 slug = "el-modelo-de-cajas-css-estandar"
 date = 2024-07-06T21:54:03+00:00
+description = "Explicación práctica del modelo de cajas CSS estándar y de cómo width, height, padding, border y margin determinan el tamaño final."
 draft = false
 lang = "es-AR"
 

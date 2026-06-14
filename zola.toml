@@ -1,7 +1,8 @@
 base_url = "https://mauro.ar"
-title = "mauro.ar"
+title = "Mauro.ar"
+author = "Mauro Gabriel"
 default_language = "es"
-description = "Blog personal de Mauro Gabriel sobre tecnología, productividad, desarrollo web y herramientas Apple."
+description = "Blog personal de Mauro Gabriel sobre tecnología, productividad, automatización y aprendizaje."
 
 compile_sass = true
 build_search_index = true
@@ -19,5 +20,6 @@ theme = "ayu-dark"
 author = "Mauro Gabriel"
 subtitle = "Blog personal 🧑‍💻 donde escribo sobre: música 🎧 / tecnología 🖥️ / productividad 🚀 y otras cosas."
 avatar = "avatar.jpg"
-social_image = "icons/home.svg"
+social_image = "avatar.jpg"
 keywords = "tecnología, productividad, desarrollo web, iOS, macOS, automatización, herramientas Apple"
+google_site_verification = ""

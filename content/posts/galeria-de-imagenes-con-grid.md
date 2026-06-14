@@ -2,6 +2,7 @@
 title = "Galería de imágenes con grid"
 slug = "galeria-de-imagenes-con-grid"
 date = 2024-07-13T00:56:02+00:00
+description = "Código HTML y CSS para crear una galería de imágenes responsive con Grid, tres columnas y adaptación a distintos tamaños de pantalla."
 draft = false
 lang = "es-AR"
 

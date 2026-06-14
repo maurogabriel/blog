@@ -2,6 +2,7 @@
 title = "Weeklog 004"
 slug = "weeklog-004"
 date = 2024-07-14T16:05:36+00:00
+description = "Cuarta recopilación semanal de herramientas y lecturas sobre CSS, diseño responsive, fotografía, aprendizaje y productividad."
 draft = false
 lang = "es-AR"
 
@@ -17,7 +18,7 @@ featured = false
 Estos son los enlaces que guarde en los pasados días y que muestran un poco en lo que estuve ocupado. 
 
 ### 🌎 Weekly Links
-- [Introducing Blot, a Bear Blog Theme](https://sun.bearblog.dev/blot/) Uno de los tantos temas que hay disponibles para BearBlog. En este caso con el estilo de Material Design.
+- Introducing Blot, a Bear Blog Theme. Uno de los tantos temas que hay disponibles para BearBlog. En este caso con el estilo de Material Design.
 - [Customizing GitHub Gists](https://codersblock.com/blog/customizing-github-gists/) Buen artículo explicando cómo modificar el estilo de los bloques de código de Gist. Una de las razones de usar Gist es tener una biblioteca de snippets y mantener actualizada la información y el código en todo momento.
 - [Gist Syntax Themes](https://lonekorean.github.io/gist-syntax-themes/) Aqui algunas plantillas de CSS para aplicar distintos estilos a tus snippets de Gist.
 - [Free LUTs & LUTs Packs](https://www.on1.com/free/luts/) Esta semana estuve retocando algunas fotos para agregar en la galería de fotos que acabo de incluir en el blog y necesitaba algunos presets o LUTs para usar con Photomator. Encontré varios LUTs gratuitos de ON1. Cumplen muy bien con lo que necesito. PD: *Photomator tiene la herramienta de ML (Machine Learning) que también funciona muy bien.*

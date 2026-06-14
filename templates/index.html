@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 
-{% block title %}Inicio | {{ config.title }}{% endblock title %}
-{% block description %}Bienvenido a mauro.ar, blog personal de Mauro Gabriel con artículos sobre tecnología, productividad, Mac, iPhone y desarrollo web.{% endblock description %}
-
 {% block content %}
 
 <section class="home-hero">
@@ -104,7 +101,7 @@
     {% endfor %}
   </div>
 
-  <a class="see-all-posts" href="{{ get_url(path='posts') }}">
+  <a class="see-all-posts" href="{{ get_url(path='posts', trailing_slash=true) }}">
     Ver todos los artículos
   </a>
 </section>

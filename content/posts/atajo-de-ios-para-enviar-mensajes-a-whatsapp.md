@@ -2,6 +2,7 @@
 title = "Atajo de IOS para enviar mensajes a Whatsapp"
 slug = "atajo-de-ios-para-enviar-mensajes-a-whatsapp"
 date = 2024-06-06T13:00:00+00:00
+description = "Cómo crear un atajo de iOS para iniciar conversaciones de WhatsApp con números que no están guardados en la agenda del teléfono."
 draft = false
 lang = "es-AR"
 

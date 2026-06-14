@@ -2,6 +2,7 @@
 title = "Mejora tu Productividad con la Regla del 85%"
 slug = "regla-del-85-como-superar-el-perfeccionismo-y-mejorar-la-productividad"
 date = 2024-06-29T00:07:00+00:00
+description = "Cómo aplicar la regla del 85% para evitar el perfeccionismo, terminar tareas con buena calidad y usar mejor el tiempo disponible."
 draft = false
 lang = "es-AR"
 
@@ -12,7 +13,6 @@ tags = ["productivity"]
 make_discoverable = true
 is_page = false
 meta_image = "https://bear-images.sfo2.cdn.digitaloceanspaces.com/mauro-1719619606.png"
-meta_description = "La regla del 85% mejora la productividad. Trabaja hasta el 85% de la calidad deseada, descansa, vuelve con mente fresca y refina al 85% ideal"
 +++
 
 Muchos, me incluyo, nos la pasamos puliendo nuestro laburo hasta el cansancio buscando la perfección. Obvio, hacer las cosas bien es fundamental, nos diferencia de los que hacen las cosas por hacerla así nomás.

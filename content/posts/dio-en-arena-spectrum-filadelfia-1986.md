@@ -2,6 +2,7 @@
 title = "Dio en Arena Spectrum Filadelfia 1986"
 slug = "dio-en-arena-spectrum-filadelfia-1986"
 date = 2024-06-14T02:04:00+00:00
+description = "Recorrido por el concierto de Dio en el Spectrum de Filadelfia de 1986, con su repertorio, puesta en escena y el video completo del show."
 draft = false
 lang = "es-AR"
 

@@ -2,6 +2,7 @@
 title = "Mi concepto de amistad"
 slug = "mi-concepto-de-amistad"
 date = 2024-06-09T23:25:00+00:00
+description = "Una reflexión personal sobre la amistad, el apoyo mutuo y el valor de los vínculos construidos al compartir momentos importantes."
 draft = false
 lang = "es-AR"
 
@@ -21,4 +22,4 @@ Sin embargo hay distintas maneras de descifrar si una persona se ha convertido e
 
 Partiendo primeramente de que los buenos amigos están presentes en las buenas y malas, también se puede deducir la clase de buen amigo cuando lo vemos haciendo cosas desinteresadamente, en las sombras, sin que otros sepan de su ayuda. O cuando nos corrige pero con tacto, con humildad pues desea que no cometamos los mismos errores en frente de otros que no nos podrían llegar a perdonar.
 
-Esa es la lección que aprendi esta semana, la del concepto del buen amigo. Lo que implica la amistad y las lindas lecciones que aprendemos de ella. 
+Esa es la lección que aprendi esta semana, la del concepto del buen amigo. Lo que implica la amistad y las lindas lecciones que aprendemos de ella.

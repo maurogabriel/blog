@@ -2,6 +2,7 @@
 title = "mauro* Bear Blog theme v1"
 slug = "mauro-bear-blog-theme-v1"
 date = 2024-06-16T22:11:00+00:00
+description = "Primera versión de un tema personalizado para Bear Blog, basado en su estilo original y en ideas visuales tomadas de new.css."
 draft = false
 lang = "es-AR"
 

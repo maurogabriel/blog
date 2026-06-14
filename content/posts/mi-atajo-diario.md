@@ -2,6 +2,7 @@
 title = "Mi atajo diario"
 slug = "mi-atajo-diario"
 date = 2024-06-10T23:03:00+00:00
+description = "Un atajo de iOS que reúne ubicación, clima, calendario y preguntas de reflexión para crear automáticamente una nota diaria."
 draft = false
 lang = "es-AR"
 

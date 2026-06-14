@@ -4,58 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="{{ config.extra.author }}">
-  <meta name="keywords" content="{{ config.extra.keywords }}">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#2C3B4D" media="(prefers-color-scheme: dark)">
 
-  {% set page_title = config.title %}
-  {% if page is defined and page.title is defined %}
-    {% set page_title = page.title %}
-  {% elif section is defined and section.title is defined %}
-    {% set page_title = section.title %}
-  {% endif %}
-  {% set seo_title = page_title %}
-  {% if (page is defined and page.title is defined) or (section is defined and section.title is defined) %}
-    {% set seo_title = page_title ~ " | " ~ config.title %}
-  {% endif %}
-  {% set seo_description = config.description %}
-  {% if page is defined %}
-    {% set seo_description = page.description | default(value=page.summary | default(value="") | striptags) | default(value=seo_description) %}
-  {% elif section is defined %}
-    {% set seo_description = section.description | default(value=seo_description) %}
-  {% endif %}
-
-  <title>{% block title %}{{ seo_title }}{% endblock title %}</title>
-
-  <link rel="canonical" href="{{ current_url | default(value=get_url(path='/')) | safe }}">
-  <link rel="alternate" hreflang="es" href="{{ current_url | default(value=get_url(path='/')) | safe }}">
+  {% include "partials/seo.html" %}
   <link rel="icon" href="{{ get_url(path='icons/home.svg') | safe }}" type="image/svg+xml">
-
-  <meta property="og:site_name" content="{{ config.title }}">
-  <meta property="og:locale" content="es_ES">
-  <meta
-    property="og:title"
-    content="{% block og_title %}{{ seo_title }}{% endblock og_title %}"
-  >
-  <meta
-    property="og:description"
-    content="{% block og_description %}{{ seo_description }}{% endblock og_description %}"
-  >
-  <meta property="og:url" content="{{ current_url | default(value=get_url(path='/')) | safe }}">
-  <meta property="og:type" content="{% if page is defined and page.date is defined %}article{% else %}website{% endif %}">
-  <meta property="og:image" content="{{ get_url(path=config.extra.social_image) | safe }}">
-  <meta property="og:image:alt" content="{{ config.title }}">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% block twitter_title %}{{ seo_title }}{% endblock twitter_title %}">
-  <meta name="twitter:description" content="{% block twitter_description %}{{ seo_description }}{% endblock twitter_description %}">
-  <meta name="twitter:image" content="{{ get_url(path=config.extra.social_image) | safe }}">
-  <meta name="twitter:site" content="@maurogabriel">
-  <meta name="twitter:creator" content="@maurogabriel">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,8 +35,8 @@
       <nav aria-label="Navegación principal">
         <ul class="site-nav">
           <li><a href="{{ get_url(path='/') | safe }}">Home</a></li>
-          <li><a href="{{ get_url(path='posts') | safe }}">Posts</a></li>
-          <li><a href="{{ get_url(path='tags') | safe }}">Tags</a></li>
+          <li><a href="{{ get_url(path='posts', trailing_slash=true) | safe }}">Posts</a></li>
+          <li><a href="{{ get_url(path='tags', trailing_slash=true) | safe }}">Tags</a></li>
           <li class="site-nav-actions">
             <button
               id="search-open"

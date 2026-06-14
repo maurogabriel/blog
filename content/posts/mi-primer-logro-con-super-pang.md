@@ -2,6 +2,7 @@
 title = "Mi primer logro con Super Pang!"
 slug = "mi-primer-logro-con-super-pang"
 date = 2024-07-19T00:06:54+00:00
+description = "Recuerdos de los videojuegos arcade y la satisfacción de alcanzar un primer gran logro jugando al clásico Super Pang."
 draft = false
 lang = "es-AR"
 

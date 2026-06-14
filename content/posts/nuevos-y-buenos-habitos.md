@@ -2,6 +2,7 @@
 title = "Nuevos y buenos hábitos"
 slug = "nuevos-y-buenos-habitos"
 date = 2024-06-05T01:35:00+00:00
+description = "Una reflexión sobre cómo reconocer malos hábitos, reemplazarlos con rutinas útiles y sostener cambios positivos en la vida diaria."
 draft = false
 lang = "es-AR"
 

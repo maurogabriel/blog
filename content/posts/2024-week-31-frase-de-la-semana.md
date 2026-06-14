@@ -1,7 +1,8 @@
 +++
-title = "Frase de la semana"
+title = "Frase de la semana: George Orwell"
 slug = "2024-week-31-frase-de-la-semana"
 date = 2024-07-29T00:21:49+00:00
+description = "Una reflexión semanal a partir de la frase de George Orwell sobre decir la verdad en tiempos marcados por el engaño."
 draft = false
 lang = "es-AR"
 

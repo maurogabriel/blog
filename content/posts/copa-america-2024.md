@@ -2,6 +2,7 @@
 title = "Copa América 2024"
 slug = "copa-america-2024"
 date = 2024-06-25T03:00:00+00:00
+description = "Una mirada personal a la Copa América 2024 durante el partido entre Argentina y Chile, y al fútbol como momento para compartir en familia."
 draft = false
 lang = "es-AR"
 

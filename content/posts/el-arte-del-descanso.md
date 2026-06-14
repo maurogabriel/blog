@@ -2,6 +2,7 @@
 title = "El arte del descanso"
 slug = "el-arte-del-descanso"
 date = 2024-07-05T19:47:00+00:00
+description = "Una breve reflexión inspirada en John Steinbeck sobre el descanso como parte necesaria del trabajo y de una vida equilibrada."
 draft = false
 lang = "es-AR"
 

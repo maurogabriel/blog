@@ -1,7 +1,8 @@
 +++
-title = "Frase de la semana"
+title = "Frase de la semana: conocimiento y sabiduría"
 slug = "frase-de-la-semana"
 date = 2024-06-07T23:00:00+00:00
+description = "Una reflexión sobre la diferencia entre conocimiento y sabiduría, inspirada en una frase de Sorcha Carey y en experiencias cotidianas."
 draft = false
 lang = "es-AR"
 

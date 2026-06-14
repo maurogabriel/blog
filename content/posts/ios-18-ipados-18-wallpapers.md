@@ -2,6 +2,7 @@
 title = "iOS 18 y iPadOS 18 wallpapers"
 slug = "ios-18-ipados-18-wallpapers"
 date = 2024-06-11T23:25:00+00:00
+description = "Enlaces de descarga para los wallpapers oficiales de iOS 18 y iPadOS 18 presentados por Apple durante la WWDC24."
 draft = false
 lang = "es-AR"
 

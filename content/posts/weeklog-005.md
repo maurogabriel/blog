@@ -2,6 +2,7 @@
 title = "Weeklog 005"
 slug = "weeklog-005"
 date = 2024-07-28T23:26:06+00:00
+description = "Quinta selección semanal de enlaces sobre diseño, tipografía, colores, modo oscuro, escritura y personalización de blogs."
 draft = false
 lang = "es-AR"
 

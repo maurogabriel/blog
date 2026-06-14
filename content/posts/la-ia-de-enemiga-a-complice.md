@@ -2,6 +2,7 @@
 title = "La IA, de enemiga a cómplice"
 slug = "la-ia-de-enemiga-a-complice"
 date = 2024-07-24T15:21:18+00:00
+description = "Una experiencia personal usando ChatGPT y Copilot para convertir la inteligencia artificial en una aliada práctica para el trabajo."
 draft = false
 lang = "es-AR"
 

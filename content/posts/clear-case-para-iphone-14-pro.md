@@ -2,6 +2,7 @@
 title = "Clear Case para iPhone 14 Pro"
 slug = "clear-case-para-iphone-14-pro"
 date = 2024-06-08T20:55:00+00:00
+description = "Experiencia de uso con la funda Clear Case para iPhone 14 Pro: tacto, protección, ajuste, carga inalámbrica y relación precio-calidad."
 draft = false
 lang = "es-AR"
 

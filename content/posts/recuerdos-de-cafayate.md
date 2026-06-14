@@ -2,6 +2,7 @@
 title = "Recuerdos de Cafayate"
 slug = "recuerdos-de-cafayate"
 date = 2024-06-21T22:45:00+00:00
+description = "Crónica de un viaje a Cafayate con paisajes de la Quebrada de las Conchas, gastronomía regional, bodegas y degustaciones."
 draft = false
 lang = "es-AR"
 
