@@ -18,36 +18,28 @@ meta_image = "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=for
 
 Si sos como yo, seguro pasaste horas renegando con editores de texto tradicionales. Ya sabés, esos donde perdés más tiempo buscando el botón de "negrita" o acomodando un margen que escribiendo lo que realmente tenés en la cabeza.
 
-<!-- more -->
-
 Hace un tiempo descubrí **Markdown** y, la verdad, me cambió la forma de encarar cualquier laburo de escritura.
+
+<!-- more -->
 
 ### ¿Qué tiene de especial?
 
-Lo que más me gusta es que es ==puro texto plano==. No necesitás ninguna aplicación estrafalaria para leerlo. Podés abrir un archivo `.md` en la compu más vieja del mundo o en el celu más moderno, y el contenido siempre va a estar ahí, fiel.
+Lo que más me gusta es que es `puro texto plano`. No necesitás ninguna aplicación rara para leerlo. Podés abrir un archivo `.md` en la compu más vieja del mundo o en el celu más moderno, y el contenido siempre va a estar legible, tal como lo escribiste.
 
-Para los que tenemos un blog en Zola o usamos herramientas como Drafts, Markdown es una masa porque te permite concentrarte en el flujo de tus ideas. Escribís, tirás un par de asteriscos para resaltar algo y listo, no le sacás las manos al teclado para nada.
+En estos momentos, para este blog estoy usando un SSG llamado Zola, y ademas uso Drafts en Mac, por lo que este tipo de archivos me permite concentrarme en el flujo de ideas mas que en el formato. Escribís, tirás un par de asteriscos para resaltar algo y listo, no le sacás las manos al teclado para nada.
 
 ![Markdown writing setup](https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=1000)
 
 ### Los beneficios que más valoro
 
 1. **Portabilidad total:** Me llevo mis archivos a donde quiero sin miedo a que se rompa el formato.
-2. **Simplicidad:** Aprendés las cuatro reglas locas de sintaxis en cinco minutos y ya estás volando.
-3. **Enfoque:** Al no tener distracciones visuales, las palabras fluyen mejor.
+2. **Simplicidad:** Aprendés las reglas de sintaxis en cinco minutos y ya estás escribiendo en Markdown.
+3. **Enfoque:** Al no tener distracciones visuales, las ideas y palabras fluyen mejor.
 
-A veces nos complicamos la vida buscando la herramienta "perfecta" con mil funciones, cuando en realidad lo que necesitamos es algo que nos deje ser productivos sin darnos tantas vueltas.
+A veces nos complicamos la vida buscando la herramienta "perfecta" con mil funciones, cuando en realidad lo que necesitamos es algo que nos deje ser productivos sin dar tantas vueltas.
 
 ### Una pequeña reflexión
 
-Como les contaba en el post sobre los nuevos hábitos, simplificar es la clave. Markdown no es solo una forma de anotar cosas; es una filosofía de trabajo que te ayuda a mantener el orden en medio del quilombo diario.
+Como les contaba en el post sobre mis nuevos hábitos, simplificar es la clave. Markdown no es solo una forma de anotar cosas; es un modelo de trabajo que te ayuda a mantener el orden en medio del lío del dia a dia.
 
-Si todavía no le diste una oportunidad seria, haceme caso, probá escribir tu próximo post o nota personal así. Una vez que le agarrás el gustito a la rapidez de poner un `#` para un título, no volvés más atrás.
-
-¡Nos vemos en la próxima entrada!
-
-<hr>
-
-### Notas
-
-[^1]: Podés consultar la guía oficial de Markdown si querés profundizar en la sintaxis técnica, aunque con lo básico ya tenés para rato.
+Si todavía no le diste una oportunidad seria, probá escribir tu próximo post o nota personal así. Una vez que le agarrás el gustito a la rapidez de poner un `#` para un título, no volvés más atrás.
