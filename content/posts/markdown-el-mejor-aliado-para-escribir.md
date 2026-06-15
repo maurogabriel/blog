@@ -1,4 +1,3 @@
-+++
 title = "Markdown: Por qué es el mejor aliado para tus textos"
 slug = "markdown-el-mejor-aliado-para-escribir"
 date = 2024-08-05T10:30:00+00:00
@@ -18,9 +17,9 @@ meta_image = "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=for
 
 Si sos como yo, seguro pasaste horas renegando con editores de texto tradicionales. Ya sabés, esos donde perdés más tiempo buscando el botón de "negrita" o acomodando un margen que escribiendo lo que realmente tenés en la cabeza.
 
-Hace un tiempo descubrí **Markdown** y, la verdad, me cambió la forma de encarar cualquier laburo de escritura.
-
 <!-- more -->
+
+Hace un tiempo descubrí **Markdown** y, la verdad, me cambió la forma de encarar cualquier laburo de escritura.
 
 ### ¿Qué tiene de especial?
 
@@ -28,7 +27,6 @@ Lo que más me gusta es que es ==puro texto plano==. No necesitás ninguna aplic
 
 Para los que tenemos un blog en Zola o usamos herramientas como Drafts, Markdown es una masa porque te permite concentrarte en el flujo de tus ideas. Escribís, tirás un par de asteriscos para resaltar algo y listo, no le sacás las manos al teclado para nada.
 
-!Beneficios de usar Markdown
 ![Markdown writing setup](https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=1000)
 
 ### Los beneficios que más valoro
